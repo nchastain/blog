@@ -4,6 +4,7 @@ import Grid from './Grid'
 import GridItem from './GridItem'
 import BlogContainer from './BlogContainer'
 import Header from './Header'
+import SectionHeader from './SectionHeader'
 import capsuleLogo from './assets/whitelogo.png'
 import whiteCapsule from './assets/white_capsule.png'
 import capsuleIcon from './assets/capsule_logo.png'
@@ -17,9 +18,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <BlogContainer />
+        <SectionHeader title='Projects' />
         <Grid backgroundColor='#a083c4'>
           <GridItem color='#DDC6FA'>
-            <img src={transparentCapsuleLogo} height='120px' />
+            <img src={transparentCapsuleLogo} className='project-logo' />
             <div className='project-info'>
               <div className='project-title'>
                 <img src={whiteCapsule} width='240px' />
@@ -29,7 +31,7 @@ class App extends Component {
         </Grid>
         <Grid backgroundColor='#4267b2'>
           <GridItem color='white'>
-            <img src={snowballotLogo} height='120px' />
+            <img src={snowballotLogo} className='project-logo' />
             <div className='project-info'>
               <div className='project-title' id='snowballot-title'>Snowballot</div>
             </div>
@@ -37,9 +39,8 @@ class App extends Component {
         </Grid>
         <Grid backgroundColor='rgba(170, 39, 45, 1)'>
           <GridItem color='white'>
-            <img src={bliveLogo} height='70px' />
+            <img src={bliveLogo} className='project-logo' />
             <div className='project-info'>
-              <div className='project-title'>OTT Manager</div>
             </div>
           </GridItem>
         </Grid>
