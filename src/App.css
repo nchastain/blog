@@ -1,0 +1,157 @@
+@font-face {
+  font-family:'Gotham';
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Light_gdi.eot');
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Light_gdi.eot?#iefix') format('embedded-opentype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Light_gdi.woff') format('woff'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Light_gdi.ttf') format('truetype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Light_gdi.otf') format('opentype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Light_gdi.svg#GothamSSm-Light') format('svg');
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-FB04;
+}
+  
+@font-face {
+  font-family:'GothamSSm';
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Medium_gdi.eot');
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Medium_gdi.eot?#iefix') format('embedded-opentype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Medium_gdi.woff') format('woff'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Medium_gdi.ttf') format('truetype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Medium_gdi.otf') format('opentype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamSSm-Medium_gdi.svg#GothamSSm-Medium') format('svg');
+  font-weight: 350;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-FB04;
+}  
+  
+@font-face {
+  font-family:'GothamSSm-Bold';
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/002_fonts/gothamSS/bold/GothamSSm-Bold_gdi.eot');
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/002_fonts/gothamSS/bold/GothamSSm-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+  url('//d23tnwcjq9ggyl.cloudfront.net/002_fonts/gothamSS/bold/GothamSSm-Bold_gdi.woff') format('woff'),
+  url('//d23tnwcjq9ggyl.cloudfront.net/002_fonts/gothamSS/bold/GothamSSm-Bold_gdi.ttf') format('truetype'),
+  url('//d23tnwcjq9ggyl.cloudfront.net/002_fonts/gothamSS/bold/GothamSSm-Bold_gdi.otf') format('opentype'),
+  url('//d23tnwcjq9ggyl.cloudfront.net/002_fonts/gothamSS/bold/GothamSSm-Bold_gdi.svg#GothamSSm-Bold') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-FB04;
+}
+  
+@font-face {
+  font-family:'GothamCondensed';
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamCondensed-Bold_gdi.eot');
+  src: url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamCondensed-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamCondensed-Bold_gdi.woff') format('woff'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamCondensed-Bold_gdi.ttf') format('truetype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamCondensed-Bold_gdi.otf') format('opentype'),
+    url('//d23tnwcjq9ggyl.cloudfront.net/fonts/gotham/GothamCondensed-Bold_gdi.svg#GothamSSm-Light') format('svg');
+  font-style: normal;
+  font-stretch: expanded;
+  unicode-range: U+0020-FB04;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('assets/fonts/Futura_Light_BT.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaExtraBold';
+  src: url('assets/fonts/FuturaLT-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'FuturaItalic';
+  src: url('assets/fonts/FuturaLT-LightOblique.ttf');
+}
+
+body {
+  font-family: 'Gotham';
+}
+
+.blog-container {
+  padding: 20px;
+  background-color: #eee;
+}
+
+.blog-entry {
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #eee;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+.blog-entry + .blog-entry {
+  margin-top: 20px;
+}
+
+.blog-entry-title-block {
+  padding-left: 10px;
+}
+
+.blog-entry-title {
+  font-size: 16px;
+  font-family: 'GothamSSm';
+  color: #555;
+}
+
+.blog-entry-description {
+  padding-top: 5px;
+  font-size: 12px;
+  font-family: 'GothamSSm';
+  color: darkgrey;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.grid-item {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 30px;
+  color: 'white';
+}
+
+.header {
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-item {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+  color: white;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+}
+
+.project-title {
+  padding-left: 25px;
+}
+
+#snowballot-title {
+  font-family: 'Futura';
+  font-size: 50px;
+  letter-spacing: -1.5px;
+}
