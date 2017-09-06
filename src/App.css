@@ -68,18 +68,19 @@
 }
 
 body {
-  font-family: 'Gotham';
+  font-family: 'Futura';
 }
 
 .blog-container {
-  padding: 20px;
-  padding-top: 0px;
+  padding-bottom: 20px;
   background-color: #eee;
 }
 
 .blog-entry {
   min-height: 50px;
   display: flex;
+  margin-left: 80px;
+  margin-right: 80px;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
@@ -98,14 +99,14 @@ body {
 
 .blog-entry-title {
   font-size: 16px;
-  font-family: 'GothamSSm';
+  font-family: 'Futura';
   color: #555;
 }
 
 .blog-entry-description {
   padding-top: 5px;
   font-size: 12px;
-  font-family: 'GothamSSm';
+  font-family: 'Futura';
   color: darkgrey;
 }
 
@@ -143,10 +144,11 @@ body {
   height: 200px;
   overflow: hidden;
   margin: 20px;
+  margin-top: 0px;
   border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 1px 0px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    2px 2px 1px 0px #ccc;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         2px 2px 1px 0px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 0 5px 14px 0 rgba(15,46,77,.2);
+  -moz-box-shadow: 0 5px 14px 0 rgba(15,46,77,.2);
+  box-shadow: 0 5px 14px 0 rgba(15,46,77,.2);
   border-top: 1px solid #eee;
 }
 
@@ -189,8 +191,145 @@ body {
   padding-left: 25px;
 }
 
+.project-card {
+  background-color: blue;
+  margin: 10px;
+  display: flex;
+  flex: 1;
+
+}
+
 #snowballot-title {
   font-family: 'Futura';
   font-size: 50px;
   letter-spacing: -1.5px;
+}
+
+.projects-container {
+  margin: 1.66%;
+  position: relative;
+  display: block;
+  text-align: left;
+}
+
+.square {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-color:#1E1E1E;
+    overflow:hidden;
+    text-align: center;
+}
+
+.content {
+    position:absolute;
+    height:90%; /* = 100% - 2*5% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 5%;
+}
+
+.table {
+    display:table;
+    width:100%;
+    height:100%;
+}
+
+.table-cell {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+/*  For list */
+ul {
+    text-align:left;
+    margin:5% 0 0;
+    padding:0;
+    list-style-position:inside;
+}
+
+li {
+    margin: 0 0 0 5%;
+    padding:0;
+}
+
+/*  For responsive images */
+
+.content .rs {
+    width:auto;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+}
+/*  For responsive images as background */
+
+.bg {
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    color:#fff;
+}
+
+.img1 {
+    background-image: url('https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg');
+}
+
+.img2 {
+    background-image: url('https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg');
+}
+
+.img3 {
+    background-image: url('https://farm4.staticflickr.com/3794/13893055574_3df0ab636b.jpg');
+}
+
+body {
+    font-size:20px;
+    font-family: 'Lato',verdana, sans-serif;
+    color: #fff;
+    text-align:center;
+    background:#ECECEC;
+}
+
+p {
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+
+.numbers {
+    font-weight:900;
+    font-size:100px;
+}
+
+#bottom {
+    clear:both;
+    margin:0 1.66%;
+    width:89.68%;
+    padding: 3.5%;
+    background-color:#1E1E1E;
+    color: #fff;
+}
+
+#bottom p {
+    text-align:center;
+    line-height:2em;
+}
+
+#bottom a {
+    color: #000;
+    text-decoration:none;
+    border:1px solid #000;
+    padding:10px 20px 12px;
+    line-height:70px;
+    background:#ccc;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#bottom a:hover{
+    background:#ECECEC;
+    border:1px solid #fff;
 }

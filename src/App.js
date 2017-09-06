@@ -11,6 +11,7 @@ import capsuleIcon from './assets/capsule_logo.png'
 import snowballotLogo from './assets/snowballot_logo_light.png'
 import transparentCapsuleLogo from './assets/TransparentCapsuleLogo.png'
 import bliveLogo from './assets/blive_logo.png'
+import ProjectCard from './ProjectCard'
 
 class App extends Component {
   render() {
@@ -19,31 +20,16 @@ class App extends Component {
         <Header />
         <BlogContainer />
         <SectionHeader title='Projects' />
-        <Grid backgroundColor='#a083c4'>
-          <GridItem color='#DDC6FA'>
-            <img src={transparentCapsuleLogo} className='project-logo' />
-            <div className='project-info'>
-              <div className='project-title'>
-                <img src={whiteCapsule} width='240px' />
-              </div>
-            </div>
-          </GridItem>
-        </Grid>
-        <Grid backgroundColor='#4267b2'>
-          <GridItem color='white'>
-            <img src={snowballotLogo} className='project-logo' />
-            <div className='project-info'>
-              <div className='project-title' id='snowballot-title'>Snowballot</div>
-            </div>
-          </GridItem>
-        </Grid>
-        <Grid backgroundColor='rgba(170, 39, 45, 1)'>
-          <GridItem color='white'>
-            <img src={bliveLogo} className='project-logo' />
-            <div className='project-info'>
-            </div>
-          </GridItem>
-        </Grid>
+        <div className='projects-container'>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
       </div>
     );
   }
