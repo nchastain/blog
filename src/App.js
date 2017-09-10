@@ -17,18 +17,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <BlogContainer />
-        <SectionHeader title='Projects' />
-        <div className='projects-container'>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        <div className='section' style={{backgroundColor: 'rgb(117, 117, 169)'}}>
+          <SectionHeader title='About' background='rgb(117, 117, 169)' color='white' />
+          Blach blah blach, something goes ehre
+        </div>
+        <div className='section' style={{backgroundColor: 'white'}}>
+          <BlogContainer />
+        </div>
+        <div className='section' style={{backgroundColor: '#eee'}}>
+          <SectionHeader title='Projects' />
+          <div className='projects-container'>
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </div>
         </div>
       </div>
     );

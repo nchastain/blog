@@ -6,7 +6,7 @@ class BlogContainer extends Component {
     render() {
         return (
             <div className='blog-container'>
-                <SectionHeader title='Posts' />
+                <SectionHeader title='Posts' background='white' />
                 <BlogEntry />
                 <BlogEntry />
                 <BlogEntry />

@@ -3,10 +3,8 @@ import React, { Component } from 'react'
 class SectionHeader extends Component {
     render() {
         return (
-            <div className='section-header'>
-                <div className='section-header-dash' />
-                <div className='section-header-title'>{this.props.title}</div>
-                <div className='section-header-dash' />
+            <div className='section-header-container' style={{backgroundColor: this.props.background}}>
+                <div className='section-header' style={{color: this.props.color}}>{this.props.title.toUpperCase()}</div>
             </div>
         )
     }
