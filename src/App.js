@@ -9,32 +9,49 @@ import capsuleLogo from './assets/whitelogo.png'
 import whiteCapsule from './assets/white_capsule.png'
 import capsuleIcon from './assets/capsule_logo.png'
 import snowballotLogo from './assets/snowballot_logo_light.png'
+import MediumIcon from './assets/medium.png'
+import FacebookLogo from './assets/facebook.png'
+import GithubLogo from './assets/github.png'
+import TwitterLogo from './assets/twitter.png'
+import EmailIcon from './assets/mail.png'
+import YouTubeIcon from './assets/youtube.png'
 import transparentCapsuleLogo from './assets/TransparentCapsuleLogo.png'
 import bliveLogo from './assets/blive_logo.png'
 import ProjectCard from './ProjectCard'
+import Facebook from './assets/facebook-logo.png'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='section' style={{backgroundColor: 'rgb(117, 117, 169)'}}>
-          <SectionHeader title='About' background='rgb(117, 117, 169)' color='white' />
-          Blach blah blach, something goes ehre
+        <div className='section about-section' style={{backgroundColor: 'rgb(117, 117, 169)'}}>
+          <SectionHeader title='About' background='rgba(0,0,0,0)' color='white' />
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '20px', paddingRight: '20px'}}>
+              <div>Blach blah blach, something goes ehre</div>
+              <div id="top-header-inner">
+                <img className="icon" id="medium" src={MediumIcon} />
+                <img className="icon" id="facebook" src={FacebookLogo} />
+                <img className="icon" id="github" src={GithubLogo} />
+                <img className="icon" id="twitter" src={TwitterLogo} />
+                <img className="icon" id="email" src={EmailIcon} />
+                <img className="icon" id="youtube" src={YouTubeIcon} />
+              </div>
+            </div>
         </div>
         <div className='section' style={{backgroundColor: 'white'}}>
           <BlogContainer />
         </div>
         <div className='section' style={{backgroundColor: '#eee'}}>
-          <SectionHeader title='Projects' />
-          <div className='projects-container'>
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+          <div id="projects-section" className="section" style={{backgroundColor: '#eee', marginTop: '20px'}}>
+            <SectionHeader title='Projects' />
+            <div>
+              <ProjectCard description='Sed vulputate orci a risus rhoncus lacinia. Sed tincidunt est quis ex dapibus tristique. Etiam suscipit ut diam in lobortis.' />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
           </div>
         </div>
       </div>
