@@ -9,6 +9,7 @@ import capsuleLogo from './assets/whitelogo.png'
 import whiteCapsule from './assets/white_capsule.png'
 import capsuleIcon from './assets/capsule_logo.png'
 import snowballotLogo from './assets/snowballot_logo_light.png'
+import snowballotLogo2 from './assets/SnowballotLogo819.png'
 import MediumIcon from './assets/medium.png'
 import FacebookLogo from './assets/facebook.png'
 import GithubLogo from './assets/github.png'
@@ -45,9 +46,9 @@ class App extends Component {
           <div id="projects-section" className="section" style={{backgroundColor: '#eee', marginTop: '20px'}}>
             <SectionHeader title='Projects' />
             <div>
-              <ProjectCard description='Sed vulputate orci a risus rhoncus lacinia. Sed tincidunt est quis ex dapibus tristique. Etiam suscipit ut diam in lobortis.' />
-              <ProjectCard />
-              <ProjectCard />
+              <ProjectCard description='Sed vulputate orci a risus rhoncus lacinia. Sed tincidunt est quis ex dapibus tristique. Etiam suscipit ut diam in lobortis.' image={capsuleIcon} />
+              <ProjectCard image={snowballotLogo} />
+              <ProjectCard image={bliveLogo} />
               <ProjectCard />
               <ProjectCard />
               <ProjectCard />

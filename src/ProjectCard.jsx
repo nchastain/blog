@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Facebook from './assets/facebook-logo.png'
+import capsuleIcon from './assets/capsule_logo.png'
 
 class ProjectCard extends Component {
     render() {
         return (
             <div className="project" id="airbnb-project">
-                <span className="project-background" id="blive-project-1"></span>
-                <span className="project-title" id="blive-project-1"><img className="project-logo" src={Facebook} /></span>
+                <img src={this.props.image} className='project-image' />
+                <span className="project-title"><img className="project-logo" src={Facebook} /></span>
                 <span className="project-description">
                     <span className="description-text-container">
                         {this.props.description}
