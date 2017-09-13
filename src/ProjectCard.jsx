@@ -7,7 +7,7 @@ class ProjectCard extends Component {
         return (
             <div className="project" id="airbnb-project">
                 <img src={this.props.image} className='project-image' />
-                <span className="project-title"><img className="project-logo" src={Facebook} /></span>
+                <span className="project-title"><img className="project-logo" src={this.props.textLogo || Facebook} /></span>
                 <span className="project-description">
                     <span className="description-text-container">
                         {this.props.description}

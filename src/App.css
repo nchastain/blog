@@ -71,6 +71,17 @@ body {
   font-family: 'Futura';
 }
 
+.description-text-container {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+	transform: translateX(-50%) translateY(-50%);
+	display: inline-block;
+	font-size: 14px;
+}
+
 .project {
   width: calc(32.333% - 15px);
   display: inline-block;
@@ -102,7 +113,8 @@ body {
 	width: 25%;
 	top: 0; left: 0; bottom: 0; right: 100%;
 	height: 10%;
-	background-color: rgba(25,25,112, 1);
+  background-color: rgba(25,25,112, 1);
+  background-color: rgb(191, 105, 213);
 	padding-bottom: 5px;
 	text-align: center;
 	transition-duration: 0.3s;
@@ -166,17 +178,6 @@ body {
 	-webkit-transition-property: top;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
-}
-
-.description-text-container {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	padding-left: 15px;
-	padding-right: 15px;
-	transform: translateX(-50%) translateY(-50%);
-	display: inline-block;
-	font-size: 14px;
 }
 
 .section-content-container {

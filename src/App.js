@@ -46,9 +46,12 @@ class App extends Component {
           <div id="projects-section" className="section" style={{backgroundColor: '#eee', marginTop: '20px'}}>
             <SectionHeader title='Projects' />
             <div>
-              <ProjectCard description='Sed vulputate orci a risus rhoncus lacinia. Sed tincidunt est quis ex dapibus tristique. Etiam suscipit ut diam in lobortis.' image={capsuleIcon} />
-              <ProjectCard image={snowballotLogo} />
-              <ProjectCard image={bliveLogo} />
+              <ProjectCard
+                image={capsuleIcon}
+                textLogo={whiteCapsule} 
+              />
+              <ProjectCard />
+              <ProjectCard/>
               <ProjectCard />
               <ProjectCard />
               <ProjectCard />
