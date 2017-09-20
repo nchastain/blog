@@ -121,6 +121,17 @@ body {
 	font-size: 14px;
 }
 
+.icon {
+	height: 40px;
+  width: 40px;
+  margin: 5px;
+  filter: brightness(10000000%);
+  -webkit-filter: brightness(10000000%);
+  -moz-filter: brightness(10000000%);
+  -o-filter: brightness(10000000%);
+  -ms-filter: brightness(10000000%);
+}
+
 .project {
   width: calc(32.333% - 15px);
   display: inline-block;
@@ -221,18 +232,6 @@ body {
 
 .section-content-container {
 	padding:15px;
-}
-
-
-.icon {
-	height: 40px;
-  width: 40px;
-  margin: 5px;
-  filter: brightness(10000000%);
-  -webkit-filter: brightness(10000000%);
-  -moz-filter: brightness(10000000%);
-  -o-filter: brightness(10000000%);
-  -ms-filter: brightness(10000000%);
 }
 
 .top-header-inner {
