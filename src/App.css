@@ -67,19 +67,31 @@
   src: url('assets/fonts/FuturaLT-LightOblique.ttf');
 }
 
-body {
-  font-family: 'Futura';
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('assets/fonts/AvenirLTStd-Book.otf');
 }
 
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url('assets/fonts/AvenirLTStd-Heavy.otf');
+}
+
+body {
+  font-family: 'Avenir Book';
+}
 
 .blog-entry {
   min-height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 15px;
   padding-left: 30px;
   background-color: white;
+}
+
+.blog-entry + .blog-entry {
+  margin-top: 30px;
 }
 
 .blog-entry-thumbnail {
@@ -98,14 +110,12 @@ body {
 
 .blog-entry-title {
   font-size: 16px;
-  font-family: 'Futura';
-  color: #555;
+  color: rgba(25,25,112, 1);
 }
 
 .blog-entry-description {
   padding-top: 5px;
   font-size: 12px;
-  font-family: 'Futura';
   color: darkgrey;
   text-align: left;
 }
@@ -134,9 +144,10 @@ body {
 
 .project {
   width: calc(32.333% - 15px);
+  max-width: 500px;
   display: inline-block;
 	position: relative;
-	margin-right: 15px;
+  margin-right: 15px;
 	margin-bottom: 10px;
 	background-size: cover;
 	transition-duration: 0.3s;
@@ -164,7 +175,7 @@ body {
 	top: 0; left: 0; bottom: 0; right: 100%;
 	height: 10%;
   background-color: rgba(25,25,112, 1);
-  background-color: rgb(191, 105, 213);
+  /* background-color: rgb(110, 110, 162); */
 	padding-bottom: 5px;
 	text-align: center;
 	transition-duration: 0.3s;
@@ -179,7 +190,7 @@ body {
 }
 
 .project-logo {
-	width: 90%;
+	width: calc(100% - 20px);
 	height: auto;
 	margin: auto;
 	position: absolute;
@@ -266,6 +277,7 @@ body {
 
 .about-section {
   position: relative;
+  background-color: rgba(25,25,112, 1);
 }
 
 .about-background {
@@ -284,21 +296,17 @@ body {
 }
 
 .section-header {
-  font-size: 18px;
-  font-family: 'FuturaExtraBold';
+  font-size: 15px;
   text-align: left;
-  background: rgba(25,25,112,.6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: rgb(25,25,112);
   vertical-align: top;
+  font-family: 'Avenir Heavy';
   padding-left: 5px;
   padding-top: 10px;
-  letter-spacing: 0.5px;
+  padding-bottom: 10px;
 }
 
 .section {
-  background-color: white;
   padding-bottom: 25px;
 }
 
@@ -374,10 +382,6 @@ body {
   align-self: center;
 }
 
-.project-title {
-  padding-left: 25px;
-}
-
 .project-card {
   margin: 10px;
   display: flex;
@@ -407,12 +411,13 @@ body {
 }
 
 .projects-container {
-  padding: 1.66%;
+  max-width: 2075px;
   padding-top: 0;
   margin-top: 0;
+  padding-left: 15px;
+  margin: auto;
   background-color: #eee;
   position: relative;
-  display: block;
   text-align: left;
 }
 
@@ -482,7 +487,8 @@ a:hover {
 
 @media (max-width: 650px) {
 	.project {
-		width: calc(100% - 15px);
+    width: calc(100% - 30px);
+    margin-left: 15px;
 	}
 }
 
@@ -562,9 +568,7 @@ li {
 
 body {
     font-size:20px;
-    font-family: 'Lato',verdana, sans-serif;
     color: #fff;
-    text-align:center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

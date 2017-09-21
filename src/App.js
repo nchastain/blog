@@ -25,10 +25,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='section about-section' style={{backgroundColor: 'rgb(117, 117, 169)'}}>
+        <div className='section about-section'>
           <SectionHeader title='About' background='rgba(0,0,0,0)' color='white' />
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '20px', paddingRight: '20px'}}>
-              <div>Blach blah blach, something goes ehre</div>
+              <div className='intro-text'>I am a product manager living in Brooklyn. My parents named me after this Web site.</div>
               <div id="top-header-inner">
                 <img className="icon" id="medium" src={MediumIcon} />
                 <img className="icon" id="facebook" src={FacebookLogo} />
@@ -45,7 +45,7 @@ class App extends Component {
         <div className='section' style={{backgroundColor: '#eee'}}>
           <div id="projects-section" className="section" style={{backgroundColor: '#eee', marginTop: '20px'}}>
             <SectionHeader title='Projects' />
-            <div>
+            <div className='projects-container'>
               <ProjectCard
                 image={capsuleIcon}
                 textLogo={whiteCapsule} 
