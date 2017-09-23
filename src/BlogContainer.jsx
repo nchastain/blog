@@ -7,11 +7,13 @@ class BlogContainer extends Component {
         return (
             <div className='blog-container'>
                 <SectionHeader title='Posts' background='white' color='rgb(25,25,112)' />
-                <BlogEntry />
-                <BlogEntry />
-                <BlogEntry />
-                <BlogEntry />
-                <BlogEntry />
+                <div className='blog-entries-container'>
+                    <BlogEntry />
+                    <BlogEntry />
+                    <BlogEntry />
+                    <BlogEntry />
+                    <BlogEntry />
+                </div>
             </div>
         )
     }
