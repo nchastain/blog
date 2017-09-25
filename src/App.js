@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import './App.css'
 import Grid from './Grid'
 import GridItem from './GridItem'
@@ -17,6 +18,8 @@ import allieIcon from './assets/allie_logo_sep22.png'
 import allieText from './assets/allie_text.png'
 import onionIcon from './assets/onion.png'
 import onionText from './assets/onion_text.png'
+import bliveLogo from './assets/white_blive_logo.png'
+import bliveText from './assets/blive_text_red.png'
 import MediumIcon from './assets/medium.png'
 import FacebookLogo from './assets/facebook.png'
 import GithubLogo from './assets/github.png'
@@ -24,9 +27,10 @@ import TwitterLogo from './assets/twitter.png'
 import EmailIcon from './assets/mail.png'
 import YouTubeIcon from './assets/youtube.png'
 import transparentCapsuleLogo from './assets/TransparentCapsuleLogo.png'
-import bliveLogo from './assets/blive_logo.png'
 import ProjectCard from './ProjectCard'
 import Facebook from './assets/facebook-logo.png'
+import Home from './Home'
+import Project from './Project'
 
 class App extends Component {
   render() {
@@ -46,34 +50,10 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className='section' style={{backgroundColor: 'white'}}>
-          <BlogContainer />
-        </div>
-        <div className='section' style={{backgroundColor: '#eee'}}>
-          <div id="projects-section" className="section" style={{backgroundColor: '#eee', marginTop: '20px'}}>
-            <SectionHeader title='Projects' />
-            <div className='projects-container'>
-              <ProjectCard
-                image={capsuleIcon}
-                textLogo={whiteCapsule} 
-              />
-              <ProjectCard 
-                image={alternateSbIcon}
-                textLogo={whiteSb}
-              />
-              <ProjectCard
-                image={allieIcon}
-                textLogo={allieText}
-              />
-              <ProjectCard 
-                image={onionIcon}
-                textLogo={onionText}
-              />
-              <ProjectCard />
-              <ProjectCard />
-            </div>
-          </div>
-        </div>
+        <main>
+          <Route exact path='/' component={Home} />
+          <Route path='/projects/:slug' component={Project} />
+        </main>
       </div>
     );
   }
