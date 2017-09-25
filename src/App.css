@@ -82,49 +82,78 @@
   src: url('assets/fonts/AvenirLTStd-Light.otf');
 }
 
+a {
+  text-decoration: none;
+}
+
+a.post-tag {
+  color: rgba(25, 25, 112, 0.5);
+}
+
 body {
   font-family: 'Avenir Book';
+}
+
+.back-link {
+  text-decoration: none;
+  color: rgba(25,25,112,1);
+  background-color: white;
+  display: flex;
 }
 
 .blog-entry {
   min-height: 50px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.blog-entry:hover {
+  background-color: rgba(25, 25, 112, 0.05);
 }
 
 .blog-entry + .blog-entry {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
-.blog-entry-thumbnail {
-  height: 100px;
-  width: 100px;
-  border-radius: 55px;
-  border: 3px solid rgba(15,46,77,.2);
+.blog-entry .button-hollow {
+  font-size: 10px;
+  height: 22px;
 }
 
 .blog-entry-title-block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-decoration: none;
+  max-width: 750px;
 }
 
 .blog-entry-title {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: 'Avenir Heavy';
   color: rgba(25,25,112, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .blog-entry-description {
   padding-top: 5px;
-  font-size: 12px;
-  color: darkgrey;
+  font-size: 16px;
+  color: rgba(25, 25, 112, 0.3);
   text-align: left;
+  font-family: 'Avenir Light';
+}
+
+.blog-entry-description .date-label {
+  color: rgba(25, 25, 112, 1);
 }
 
 .blog-entries-container {
   padding-left: 45px;
+  padding-right: 45px;
   padding-bottom: 30px;
   padding-top: 20px;
 }
@@ -143,15 +172,86 @@ body {
 	font-size: 18px;
 }
 
+.fa-right {
+  margin-right: 10px;
+}
+
+.button-hollow {
+  border: 2px solid white;
+  font-size: 12px;
+  color: white;
+  transition: all .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Avenir Heavy';
+  border-radius: 500px;
+  height: 30px;
+  padding: 0px 15px;
+}
+
+.button-hollow .button-icon {
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  transition: all .2s ease-in-out;
+}
+
+.button-hollow .button-icon.left {
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.button-hollow.left:hover {
+  opacity: 0.8;
+  padding: 0px 15px;
+  position: relative;
+  margin-left: -5px;
+}
+
+.button-hollow .button-text {
+  line-height: 12px;
+  margin-top: 1px;
+}
+
+.button-hollow:hover {
+  padding: 0px 22px;
+  background-color: white;
+  color: rgba(25,25,112,1);
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.button-hollow.no-hover:hover {
+  background-color: rgba(0,0,0,0);
+  color: white;
+}
+
+.date-label {
+  font-size: 16px;
+  padding: 3px;
+  color: rgba(25, 25, 112);
+  font-family: 'Avenir Light';
+  display: none;
+}
+
 .icon {
-	height: 40px;
-  width: 40px;
+	height: 30px;
+  width: 30px;
   margin: 5px;
   filter: brightness(10000000%);
   -webkit-filter: brightness(10000000%);
   -moz-filter: brightness(10000000%);
   -o-filter: brightness(10000000%);
   -ms-filter: brightness(10000000%);
+}
+
+.image_left .project-text-block,
+.image_center .project-text-block {
+  padding-left: 50px;
+  padding-top: 10px;
 }
 
 .intro-container {
@@ -161,6 +261,68 @@ body {
   align-items: center;
   padding-left: 45px;
   padding-right: 20px;
+  padding-top: 20px;
+}
+
+.page-container {
+  background-color: white;
+  padding: 20px;
+}
+
+.post-container {
+  color: rgba(25,25,112,1);
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-tag-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.post-tag {
+  color: rgba(25, 25, 112, 0.3);
+  font-size: 10px;
+  border-radius: 10px;
+  padding: 5px 10px;;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid rgba(25, 25, 112, 0.3);
+  background-color: white;
+  font-family: 'Avenir Heavy';
+  transition: all .2s ease-in-out;
+}
+
+
+.post-tag + .post-tag {
+  margin-left: 5px;
+}
+
+.post-tag .fa {
+  margin-right: 3px;
+}
+
+.post-tag:hover {
+  padding: 5px 12px;
+  background-color: rgba(25, 25, 112, 0.3);
+  color: white;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+.post-title {
+  font-family: 'Avenir Heavy';
+  font-size: 34px;
+}
+
+.post-body { 
+  padding: 45px;
 }
 
 .project {
@@ -187,13 +349,40 @@ body {
 	padding-bottom: 100%;
 }
 
+.project-section {
+  padding: 60px;
+}
+
 #projects-section {
   width: 100%;
   padding-bottom: 0px;
 }
 
-.project-page-container {
-  background-color: white;
+.project-section-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-section-row.image_left {
+  justify-content: flex-start;
+}
+
+.project-section-row.image_center {
+  justify-content: center;
+}
+
+.project-section-title {
+  font-family: 'Avenir Heavy';
+  padding-bottom: 10px;
+  font-size: 35px;
+}
+
+.project-text-block {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-self: flex-start;
 }
 
 .project-title {
@@ -248,7 +437,7 @@ body {
 }
 
 .project:hover .project-image {
-  opacity: 0.1;
+  opacity: 0;
 }
 
 .project:hover .project-description {
@@ -264,13 +453,20 @@ body {
 	margin: auto;
 	font-size: 10pt;
 	text-align: center;
-	top: 200%;
+	top: 100%;
   color: white;
   background-color: rgba(25,25,112,0.8);
 	transition-property: top;
 	-webkit-transition-property: top;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
+}
+
+.pullout-description {
+  border: 2px solid rgba(25, 25, 112, 0.8);
+  color: rgb(25, 25, 112);
+  margin-top: 20px;
+  padding: 40px;
 }
 
 .section-content-container {
@@ -331,6 +527,19 @@ body {
 	background-size: cover;
 }
 
+.about-container {
+  color: rgb(25,25,112);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-family: 'Avenir Heavy';
+}
+
+.blog-container {
+  background-color: white;
+}
+
 .blog-section-header {
   background-color: white;
 }
@@ -383,6 +592,10 @@ body {
 
 .intro-text {
   font-family: 'Avenir Book';
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .enlarge-on-hover {
@@ -441,7 +654,7 @@ body {
 }
 
 .project:hover .project-title {
-	bottom: 200%;
+	bottom: 110%;
 }
 
 .project:hover .project-description {
@@ -510,7 +723,6 @@ body {
 
 a {
 	cursor: pointer;
-  color: rgba(25,25,112, 0.8) !important;
 }
 
 .brief-link {
@@ -655,9 +867,27 @@ p {
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 20px;
   }
   #social-links-container {
     padding-top: 15px;
+  }
+  .section-header-container.about-section {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+  }
+
+  .about-section .section-header {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+
+  .about-section .section-header-dash {
+    display: inline-block;
   }
 }
 
@@ -671,10 +901,22 @@ p {
   }
 }
 
+@media (max-width: 1000px) {
+  .intro-text {
+    flex-direction: column;
+  }
+
+  .intro-text .button-hollow:hover {
+    position: relative;
+    padding-right: 5px;
+  }
+}
+
 @media (max-width: 800px) { /* center sections and section heads at this width */
   
   .blog-entries-container {
     padding-left: 25px;
+    padding-right: 25px;
   }
 
   .projects-container {
@@ -729,8 +971,8 @@ p {
 
 @media (max-width: 600px) {
 	.icon {
-		height: 35px;
-		width: 35px;
+		height: 25px;
+		width: 25px;
 	}
 
 	#logo {
