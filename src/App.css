@@ -728,6 +728,51 @@ body {
   flex-flow: row wrap;
 }
 
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 15px;
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 5px solid rgba(186, 186, 212, 1);
+  /* border-bottom: 5px solid rgba(112, 112, 211, 1); */ 
+}
+
+.nav-bar .link {
+  /* color: rgba(112, 112, 211, 1); */
+  color: rgba(186, 186, 212, 1);
+  font-family: 'Avenir';
+  font-weight: bold;
+  display: flex;
+  letter-spacing: 0.5px;
+  align-items: center;
+  transition: color .15s;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.nav-bar .link + .link {
+  padding-left: 30px;
+}
+
+
+.nav-bar .link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-bar .link-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  padding-right: 15px;
+}
 
 .btn{
 	text-decoration:none;

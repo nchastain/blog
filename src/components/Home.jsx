@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import BlogContainer from './BlogContainer'
 import ProjectsContainer from './ProjectsContainer'
 import AboutSnippet from './AboutSnippet'
-import axios from 'axios'
 
 class Home extends Component {
     constructor() {
