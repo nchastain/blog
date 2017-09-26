@@ -94,6 +94,10 @@ body {
   font-family: 'Avenir Book';
 }
 
+main {
+  margin-top: calc(40px + 2rem);
+}
+
 .back-link {
   text-decoration: none;
   color: rgba(25,25,112,1);
@@ -157,6 +161,7 @@ body {
   padding-right: 45px;
   padding-bottom: 30px;
   padding-top: 20px;
+  max-width: 1000px;
 }
 
 .blog-info-container {
@@ -685,7 +690,6 @@ body {
 }
 
 .section-header-container {
-  position: relative;
   padding-left: 15px;
   padding-top: 20px;
   padding-bottom: 0px;
@@ -693,7 +697,7 @@ body {
   background-color: #eee;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .section-header-dash {
@@ -739,13 +743,13 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  border-bottom: 5px solid rgba(186, 186, 212, 1);
+  /* border-bottom: 5px solid rgba(186, 186, 212, 1); */
   /* border-bottom: 5px solid rgba(112, 112, 211, 1); */ 
 }
 
 .nav-bar .link {
   /* color: rgba(112, 112, 211, 1); */
-  color: rgba(186, 186, 212, 1);
+  color: #595959;
   font-family: 'Avenir';
   font-weight: bold;
   display: flex;

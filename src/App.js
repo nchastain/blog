@@ -24,7 +24,7 @@ class App extends Component {
               <div className='link'>Contact</div>
           </div>
         </div>
-        <main style={{marginTop: '77px'}}>
+        <main>
           <Route exact path='/' component={Home} />
           <Route path='/projects/:slug' component={Project} />
           <Route path='/posts/:post_id' component={Post} />
