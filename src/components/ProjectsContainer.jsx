@@ -17,7 +17,7 @@ class ProjectsContainer extends Component {
         return (
             <div className='section'>
                 <div id="projects-section" className="section">
-                    <SectionHeader title='Projects' background='rgb(186, 186, 212)' color='rgb(26, 26, 55)' />
+                    <SectionHeader title='Projects' background='rgb(186, 186, 212)' color='rgb(25, 25, 112)' />
                     <div className='projects-container'>
                         <ProjectCard
                             image={capsuleIcon}

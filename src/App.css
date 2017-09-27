@@ -276,16 +276,17 @@ p {
 }
 
 .blog-info-container .button-hollow {
-  border: 2px solid rgba(25, 25, 112, 0.8);
-  color: white;
-  background-color: rgba(25, 25, 112, 1);
-  padding-top: 1px 10px;
+  border: 1px solid rgba(26, 26, 55, 0.8);
+  color: rgb(186, 186, 212);
+  background-color: rgba(26, 26, 55, 1);
 }
 
 .blog-info-container .button-hollow:hover {
-  padding-left: 10px;
-  background-color: rgba(25, 25, 112, 1);
-  color: white;
+  background-color: white;
+  color: rgba(25, 25, 112, 0.5);
+  border: 1px solid rgba(25, 25, 112, 0.5);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .description-logo {
@@ -653,7 +654,7 @@ p {
 	text-align: center;
 	top: 100%;
   color: white;
-  background-color: rgba(25,25,112,0.8);
+  background-color: rgba(26, 26, 55, 0.8);
 	transition-property: top;
 	-webkit-transition-property: top;
 	transition-duration: 0.3s;
@@ -1256,5 +1257,27 @@ li {
 
   .nav-bar .link-container {
     display: none;
+  }
+  
+  .blog-entry {
+    display: inline-block;
+  }
+
+  .blog-entry-title {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+
+  .blog-entry-title-block {
+    padding: 0px;
+  }
+
+  .date-label {
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  .blog-info-container {
+    flex-direction: row-reverse;
   }
 }
