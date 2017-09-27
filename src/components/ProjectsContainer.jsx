@@ -15,9 +15,9 @@ import bliveText from '.././assets/blive_text_red.png'
 class ProjectsContainer extends Component {
     render() {
         return (
-            <div className='section' style={{ backgroundColor: '#eee' }}>
-                <div id="projects-section" className="section" style={{ backgroundColor: '#eee' }}>
-                    <SectionHeader title='Projects' />
+            <div className='section'>
+                <div id="projects-section" className="section">
+                    <SectionHeader title='Projects' background='rgb(186, 186, 212)' color='rgb(26, 26, 55)' />
                     <div className='projects-container'>
                         <ProjectCard
                             image={capsuleIcon}

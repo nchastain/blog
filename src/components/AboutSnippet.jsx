@@ -13,8 +13,8 @@ class AboutSnippet extends Component {
     render() {
         return (
             <div className='section about-section'>
-                <SectionHeader title='About' background='rgba(0,0,0,0)' color='white' />
                 <div className='intro-container'>
+                    <SectionHeader title='About' background='rgba(0,0,0,0)' color='white' />
                     <div className='intro-text'>
                         <div>I am a product manager living in Brooklyn. My parents named me after this Web site.</div>
                         <Link to='/about'>

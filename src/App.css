@@ -82,8 +82,99 @@
   src: url('assets/fonts/AvenirLTStd-Light.otf');
 }
 
+@font-face {
+  font-family: 'Avenir Next Heavy';
+  src: url('assets/fonts/AvenirNextLTPro-HeavyCn.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Next Heavy Italic';
+  src: url('assets/fonts/AvenirNextLTPro-HeavyCnIt.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Next Light';
+  src: url('assets/fonts/AvenirNextLTPro-UltLtCn.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Next Bold';
+  src: url('assets/fonts/AvenirNextLTPro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Next Bold Italic';
+  src: url('assets/fonts/AvenirNextLTPro-BoldCnIt.otf');
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 a {
   text-decoration: none;
+}
+
+.project .btn a:-webkit-any-link {
+  color: rgba(25, 25, 112, 1) !important;
 }
 
 a.post-tag {
@@ -91,11 +182,24 @@ a.post-tag {
 }
 
 body {
-  font-family: 'Avenir Book';
+  font-family: 'Avenir Next';
+  font-size:20px;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: rgb(26, 26, 55);
 }
 
 main {
   margin-top: calc(40px + 2rem);
+}
+
+p {
+  margin:0;
+  padding:0;
+  text-align:left;
 }
 
 .back-link {
@@ -136,7 +240,7 @@ main {
 
 .blog-entry-title {
   font-size: 18px;
-  font-family: 'Avenir Heavy';
+  font-family: 'Avenir Next Bold';
   color: rgba(25,25,112, 1);
   display: flex;
   flex-direction: row;
@@ -292,9 +396,60 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 45px;
-  padding-right: 20px;
-  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav-bar .hamburger {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar .hamburger-link-container {
+  background-color: white;
+  color: rgb(25, 25, 112);
+  font-size: 14px;
+  padding: 20px;
+  position: absolute;
+  top: 72px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: fadein .4s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein .4s; /* Firefox < 16 */
+  -ms-animation: fadein .4s; /* Internet Explorer */
+  -o-animation: fadein .4s; /* Opera < 12.1 */
+  animation: fadein .4s;
+}
+
+.nav-bar .hamburger-link-container .link + .link {
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+.nav-bar .hamburger-link-container .link {
+  color: rgb(25, 25, 112, 1) !important;
+}
+
+.nav-bar .hamburger-link-container .nav-links {
+  flex-direction: column;
+}
+
+.nav-bar .hamburger-link-container .link {
+  color: rgba(25, 25, 112, 0.8) !important;
+  font-family: 'Avenir Heavy';
+}
+
+
+.nav-bar .hamburger-link-container .link:hover {
+  color: rgba(186, 186, 212, 1) !important;
 }
 
 .outer-blog-entry {
@@ -551,10 +706,13 @@ main {
 
 .about-section {
   position: relative;
-  background-color: rgba(25,25,112, 1);
-  padding-bottom: 15px;
+  background-color: rgba(26, 26, 55, 1);
+  padding: 15px 0px;
 }
 
+.about-section .section-header-container {
+  padding: 0px;
+}
 .about-section .button-hollow:hover {
   padding: 0px 15px;
 }
@@ -648,8 +806,8 @@ main {
 .intro-text .button-hollow {
   margin-left: 10px;
   position: relative;
-  top: -1px;
-  border: 2px solid rgba(0,0,0,0);
+  border: 2px solid white;
+  top: -2px;
 }
 
 .enlarge-on-hover {
@@ -701,7 +859,7 @@ main {
 }
 
 .section-header-dash {
-  width: 500px;
+  width: 800px;
   display: none;
   margin-bottom: 3px;
 }
@@ -725,7 +883,7 @@ main {
   margin-top: 0;
   padding-left: 45px;
   padding-right: 0px;
-  background-color: #eee;
+  background-color: rgb(186, 186, 212);
   position: relative;
   text-align: left;
   display: flex;
@@ -737,27 +895,40 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 15px;
-  background-color: #1a1a1a;
+  background-color: rgb(26, 26, 55);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  /* border-bottom: 5px solid rgba(186, 186, 212, 1); */
+  /* border-bottom: 3px solid rgba(186, 186, 212, 1); */
   /* border-bottom: 5px solid rgba(112, 112, 211, 1); */ 
 }
 
 .nav-bar .link {
   /* color: rgba(112, 112, 211, 1); */
-  color: #595959;
-  font-family: 'Avenir';
-  font-weight: bold;
+  color: rgba(186, 186, 212, 1);
+  font-family: 'Avenir Next Bold';
   display: flex;
-  letter-spacing: 0.5px;
   align-items: center;
   transition: color .15s;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 14px;
+}
+
+.nav-bar .name {
+  padding-left: 10px;
+  font-family: 'Avenir Next Bold Italic';
+  font-size: 25px;
+  color: rgba(186, 186, 212, 1);
+  letter-spacing: 1.5px;
+  font-variant: small-caps;
+  padding-top: .1em;
+}
+
+.nav-bar .name:hover {
+  color: white !important;
+  opacity: 0.8;
 }
 
 .nav-bar .link + .link {
@@ -766,7 +937,7 @@ main {
 
 
 .nav-bar .link:hover {
-  color: white;
+  color: white !important;
   cursor: pointer;
 }
 
@@ -893,22 +1064,6 @@ li {
     background-image: url('https://unsplash.it/400/400/?random');
 }
 
-body {
-    font-size:20px;
-    color: #fff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background: rgba(25,25,112, 1);
-}
-
-p {
-    margin:0;
-    padding:0;
-    text-align:left;
-}
-
 .numbers {
     font-weight:900;
     font-size:100px;
@@ -965,7 +1120,15 @@ p {
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 20px;
+    padding-top: 0px;
+  }
+
+  .intro-container .intro-text {
+    padding-top: 10px;
+  }
+
+  .intro-container .intro-text .button-hollow {
+    top: -5px;
   }
   #social-links-container {
     padding-top: 15px;
@@ -1011,7 +1174,7 @@ p {
 
   .intro-text .button-hollow {
     margin-left: 0px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .intro-text .button-hollow:hover {
     position: relative;
@@ -1084,5 +1247,14 @@ p {
 	#logo {
 		height: 50px;
 		width: 50px;
-	}
+  }
+  
+  .nav-bar .hamburger {
+    padding-left: 10px;
+    display: inline-block;
+  }
+
+  .nav-bar .link-container {
+    display: none;
+  }
 }
