@@ -31,6 +31,7 @@ export const Capsule = (props) => {
                 styles={{ backgroundColor: 'rgb(25,25,112)' }}
                 image={capsuleImage}
                 title='Effortlessly track every type of goal progress'
+                text="NeCapsule's progress entry system is robust enough to include screens for photo uploads, streaks for habit creation, or in case"
                 image_position='right'
             />
             <div style={{display: 'flex', maxWidth: '1000px', padding: '20px'}}>
