@@ -30,13 +30,19 @@ export const ProjectBasics = props => (
                 <div className='basics-icon-container'>
                     <FA className='fa' name='link' />
                 </div>
-                {props.link}
+                {props.no_link 
+                    ? <div>{props.link}</div>
+                    : <a className='project-link' href={props.link}>{props.link}</a>
+                }
             </div>
             <div className='basics-info-header'>
                 <div className='basics-icon-container'>
                     <FA className='fa' name='code' />
                 </div>
-                {props.code}
+                {props.no_code 
+                    ? <div>{props.code}</div>
+                    : <a className='project-link' href={props.code}>{props.code}</a>
+                }
             </div>
         </div>
     </div>

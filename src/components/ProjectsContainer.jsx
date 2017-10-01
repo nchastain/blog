@@ -31,24 +31,24 @@ class ProjectsContainer extends Component {
                             slug='snowballot'
                             description='A 30-second poll creation Web app flexible enough to incorporate YouTube players, photos, and other embeddable media directly into each choice.'
                         />
-                        <ProjectCard
+                        {/* <ProjectCard
                             image={allieIcon}
                             textLogo={allieText}
                             slug='allie'
                             description='A travel-hacking blog featuring tips on maximizing points and miles rewards for affordable international travel.'
-                        />
+                        /> */}
                         <ProjectCard
                             image={onionIcon}
                             textLogo={onionText}
                             slug='theonion'
                             description='A satirical comedy outlet where I wrote headlines, articles, features and other content to keep the wheels of ad-based commerce rolling.'
                         />
-                        <ProjectCard
+                        {/* <ProjectCard
                             image={bliveLogo}
                             textLogo={bliveText}
                             slug='blive'
                             description='A video management tool for OTT (over-the-top) TV applications. Organizes videos for Chromecast, Roku, FireTV and AppleTV in a platform-agnostic Web app.'
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>

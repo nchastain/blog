@@ -17,6 +17,8 @@ class ProjectSection extends Component {
                     return <div className='project-section-row image_left'>{image}{text}</div>
                 case 'center':
                     return <div className='project-section-row image_center'>{image}{text}</div>
+                case 'full-width':
+                    return <div className='project-section-row image_full'>{image}{text}</div>
                 case 'right':
                 default:
                     return <div className='project-section-row image_right'>{text}{image}</div>
